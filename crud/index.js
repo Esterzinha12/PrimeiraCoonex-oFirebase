@@ -1,9 +1,17 @@
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 
-initializeApp({
-    credential: applicationDefault()
-});
+const firebaseConfig = {
+    apiKey: "AIzaSyAN09Clb3tpYdAY_u1FYOGtHX8B6Dlsvq0",
+    authDomain: "first-database-access.firebaseapp.com",
+    projectId: "first-database-access",
+    storageBucket: "first-database-access.appspot.com",
+    messagingSenderId: "487412008681",
+    appId: "1:487412008681:web:daa9b88b9011f1ce691278",
+    measurementId: "G-EBXLPCQ6Z2"
+  };
+
+initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
